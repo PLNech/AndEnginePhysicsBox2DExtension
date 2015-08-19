@@ -17,6 +17,10 @@ android {
     defaultConfig {
         minSdkVersion 10
         targetSdkVersion 19
+
+        ndk {
+            moduleName "andEnginePhysicsBox2dExtension"
+        }
     }
 
     sourceSets {
@@ -27,6 +31,8 @@ android {
             aidl.srcDirs = ['src']
             renderscript.srcDirs = ['src']
             res.srcDirs = ['res']
+            jni.srcDirs = []
+            jniLibs.srcDir 'libs'
         }
 
     }
